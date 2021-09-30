@@ -5,6 +5,9 @@
 # Program Inputs: weight of package and distance to be shipped
 # Program Outputs: cost to ship package
 
+# state purpose of program
+print("This program will tell you the cost to ship your package over a certain amount of miles.")
+
 # ask user for weight of package
 
 weight = float(input("What is the weight of your package in kg?"))
@@ -32,3 +35,5 @@ total_cost = float(total_cost)
 
 # give user output
 print("The total cost to ship your package is: $%.2f" % total_cost)
+
+print("Thank you for using the program! :)")
