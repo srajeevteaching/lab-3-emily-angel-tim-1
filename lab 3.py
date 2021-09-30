@@ -8,13 +8,11 @@
 # state purpose of program
 print("This program will tell you the cost to ship your package over a certain amount of miles.")
 
-# ask user for weight of package
+# ask user for weight of package and distance
 
 weight = float(input("What is the weight of your package in kg?"))
-
-if weight <= 0 or weight > 20:
-    print("Sorry, your package cannot be shipped.")
-else:
+distance = float(input("How many miles would your package be shipped?"))
+if (weight > 0 and weight <= 20) and (distance >= 10 and distance <= 3000):
     if weight > 0 and weight <= 2:
         cost_per_mile = 0.0022
     elif weight > 2 and weight <= 6:
@@ -23,17 +21,11 @@ else:
         cost_per_mile = 0.0074
     elif weight > 10 and weight <= 20:
         cost_per_mile = 0.0096
-
-# ask user for distance to be shipped
-
-distance = float(input("How many miles would your package be shipped?"))
-if distance < 10 or distance > 3000:
-    print("Sorry, your package cannot be shipped.")
+    total_cost = cost_per_mile * distance
+    print("The total cost to ship your package is: $%.2f" % total_cost)
 else:
-    total_cost = distance * cost_per_mile
-total_cost = float(total_cost)
+    print("Sorry, your package cannot be shipped.")
 
-# give user output
-print("The total cost to ship your package is: $%.2f" % total_cost)
+
 
 print("Thank you for using the program! :)")
