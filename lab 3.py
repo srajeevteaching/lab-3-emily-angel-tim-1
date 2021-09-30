@@ -26,6 +26,4 @@ if (weight > 0 and weight <= 20) and (distance >= 10 and distance <= 3000):
 else:
     print("Sorry, your package cannot be shipped.")
 
-
-
 print("Thank you for using the program! :)")
